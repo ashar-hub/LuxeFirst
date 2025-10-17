@@ -2,6 +2,9 @@
 
 <html lang="en">
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Welcome to The Luxury World</title>
@@ -14,7 +17,7 @@ box-sizing: border-box;
 }
 
 body {
-font-family: 'Playfair Display', 'Georgia', serif;
+font-family: 'Inter', -apple-system, sans-serif;
 line-height: 1.6;
 color: #1a1a1a;
 background: #fafafa;
@@ -28,14 +31,15 @@ padding: 0 20px;
 
 /* Header */
 .header {
-background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-color: white;
-padding: 1rem 0;
-position: fixed;
-width: 100%;
-top: 0;
-z-index: 1000;
-backdrop-filter: blur(10px);
+    background: rgba(11, 11, 12, 0.95);
+    color: #F9F7F4;
+    padding: 1.5rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(198, 166, 100, 0.1);
 }
 
 .nav {
@@ -45,12 +49,11 @@ align-items: center;
 }
 
 .logo {
-font-size: 2rem;
-font-weight: 700;
-background: linear-gradient(45deg, #F4C54D, #FFD700);
--webkit-background-clip: text;
-background-clip: text;
--webkit-text-fill-color: transparent;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #E9E3D7;
+    letter-spacing: 2px;
 }
 
 .nav-links {
@@ -86,23 +89,26 @@ transition: 0.3s;
 
 /* Hero Section */
 .hero {
-background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23000000" width="1200" height="800"/><polygon fill="%23111111" points="0,800 400,600 800,700 1200,500 1200,800"/><polygon fill="%23222222" points="0,800 300,650 700,750 1200,550 1200,800"/></svg>');
-background-size: cover;
-background-position: center;
-height: 100vh;
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
-color: white;
-margin-top: 70px;
+    background: linear-gradient(rgba(11, 11, 12, 0.7), rgba(11, 11, 12, 0.8)), 
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%230B0B0C" width="1200" height="800"/></svg>');
+    background-size: cover;
+    background-position: center;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #F9F7F4;
+    margin-top: 70px;
 }
 
 .hero-content h1 {
-font-size: 4rem;
-margin-bottom: 1rem;
-font-weight: 300;
-letter-spacing: -2px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    letter-spacing: -3px;
+    line-height: 1.1;
 }
 
 .hero-tagline {
@@ -132,38 +138,43 @@ display: inline-block;
 }
 
 .btn-primary {
-background: linear-gradient(45deg, #0066cc, #ffd700);
-color: #1a1a1a;
+    background: #0B0B0C;
+    color: #E9E3D7;
+    border: 1px solid #C6A664;
 }
 
 .btn-primary:hover {
-transform: translateY(-2px);
-box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+    background: #C6A664;
+    color: #0B0B0C;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(198, 166, 100, 0.25);
 }
 
 .btn-secondary {
-background: transparent;
-color: white;
-border: 2px solid white;
+    background: transparent;
+    color: #F9F7F4;
+    border: 1px solid #E9E3D7;
 }
 
 .btn-secondary:hover {
-background: white;
-color: #1a1a1a;
+    background: #E9E3D7;
+    color: #0B0B0C;
 }
 
 /* Categories Section */
 .categories {
-padding: 100px 0;
-background: white;
+    padding: 120px 0;
+    background: #F9F7F4;
 }
 
 .section-title {
-text-align: center;
-font-size: 3rem;
-margin-bottom: 3rem;
-color: #1a1a1a;
-font-weight: 300;
+    font-family: 'Cormorant Garamond', serif;
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+    color: #0B0B0C;
+    font-weight: 300;
+    letter-spacing: -1px;
 }
 
 .categories-grid {
@@ -174,15 +185,21 @@ margin-top: 3rem;
 }
 
 .category-card {
-background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-padding: 2rem;
-border-radius: 20px;
-text-align: center;
-transition: all 0.3s ease;
-cursor: pointer;
-border: 1px solid #e9ecef;
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border: 1px solid #E9E3D7;
+    box-shadow: 0 2px 8px rgba(11, 11, 12, 0.04);
 }
 
+.category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(11, 11, 12, 0.12);
+    border-color: #C6A664;
+}
 .category-card:hover {
 transform: translateY(-10px);
 box-shadow: 0 20px 40px rgba(0,0,0,0.1);
@@ -390,8 +407,8 @@ transform: scale(1.05);
 
 <section id="home" class="hero">
 <div class="hero-content">
-<h1>Your Gateway to Everything Luxury</h1>
-<p class="hero-tagline">Discover, Learn, and Connect in Dubai's Premier Luxury Community</p>
+<h1>Luxury, Reimagined for You.</h1>
+<p class="hero-tagline">Beyond Possession, Into Passion</p>
 <div class="cta-buttons">
 <a href="#explore" class="btn btn-primary interactive-element">Start Exploring</a>
 <a href="#guides" class="btn btn-secondary interactive-element">Beginner's Guide</a>
@@ -406,27 +423,27 @@ transform: scale(1.05);
 <h2 class="section-title">Explore Luxury Categories</h2>
 <div class="categories-grid">
 <div class="category-card interactive-element" data-category="watches">
-<div class="category-icon">⌚</div>
+<div class="category-icon" style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: #C6A664; font-weight: 300;">Timepieces</div>
 <h3>Watches</h3>
 <p>From entry-level luxury to investment timepieces</p>
 </div>
 <div class="category-card interactive-element" data-category="cars">
-<div class="category-icon">🏎️</div>
+<div class="category-icon" style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: #C6A664; font-weight: 300;">Cars</div>
 <h3>Cars</h3>
 <p>Luxury automobiles and supercar experiences</p>
 </div>
 <div class="category-card interactive-element" data-category="yachts">
-<div class="category-icon">⛵</div>
+<div class="category-icon" style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: #C6A664; font-weight: 300;">Yachts</div>
 <h3>Yachts</h3>
 <p>Maritime luxury from charter to ownership</p>
 </div>
 <div class="category-card interactive-element" data-category="realestate">
-<div class="category-icon">🏠</div>
+<div class="category-icon" style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: #C6A664; font-weight: 300;">Real Estate</div>
 <h3>Real Estate</h3>
 <p>Premium properties and investment opportunities</p>
 </div>
 <div class="category-card interactive-element" data-category="jewelry">
-<div class="category-icon">💎</div>
+<div class="category-icon" style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: #C6A664; font-weight: 300;">Jewelry</div>
 <h3>Jewelry</h3>
 <p>Fine jewelry and precious gemstones</p>
 </div>
