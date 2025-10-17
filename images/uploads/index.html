@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LuxeFirst - Your Gateway to Luxury Living</title>
 <style>
@@ -14,8 +17,8 @@ box-sizing: border-box;
 body {
 font-family: 'Cormorant' , serif;
 line-height: 1.6;
-color: #1a1a1a;
-background: #fafafa;
+color: #0B0B0C;
+background: #F9F7F4;
 }
 
 .container {
@@ -26,7 +29,7 @@ padding: 0 20px;
 
 /* Header */
 .header {
-background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+background: linear-gradient(135deg, #0B0B0C 0%, #1E2A38 100%);
 color: white;
 padding: 1rem 0;
 position: fixed;
@@ -45,7 +48,7 @@ align-items: center;
 .logo {
 font-size: 2rem;
 font-weight: 700;
-background: linear-gradient(45deg, #d4af37, #ffd700);
+background: linear-gradient(45deg,#C6A664, #E9E3D7);
 -webkit-background-clip: text;
 background-clip: text;
 -webkit-text-fill-color: transparent;
@@ -65,7 +68,7 @@ transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-color: #d4af37;
+color: #C6A664;
 }
 
 .mobile-menu {
@@ -129,8 +132,8 @@ display: inline-block;
 }
 
 .btn-primary {
-background: linear-gradient(45deg, #d4af37, #ffd700);
-color: #1a1a1a;
+background: linear-gradient(45deg, #C6A664, #C6A664);
+color: #0B0B0C;
 }
 
 .btn-primary:hover {
@@ -146,7 +149,7 @@ border: 2px solid white;
 
 .btn-secondary:hover {
 background: white;
-color: #1a1a1a;
+color: #0B0B0C;
 }
 
 /* Categories Section */
@@ -159,7 +162,7 @@ background: white;
 text-align: center;
 font-size: 3rem;
 margin-bottom: 3rem;
-color: #1a1a1a;
+color: #0B0B0C;
 font-weight: 300;
 }
 
@@ -171,7 +174,7 @@ margin-top: 3rem;
 }
 
 .category-card {
-background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+background: linear-gradient(135deg, #E9E3D7 0%, #e9ecef 100%);
 padding: 2rem;
 border-radius: 20px;
 text-align: center;
@@ -183,7 +186,7 @@ border: 1px solid #e9ecef;
 .category-card:hover {
 transform: translateY(-10px);
 box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+background: linear-gradient(135deg, #fff 0%, #E9E3D7 100%);
 }
 
 .category-icon {
@@ -194,7 +197,7 @@ margin-bottom: 1rem;
 .category-card h3 {
 font-size: 1.5rem;
 margin-bottom: 1rem;
-color: #1a1a1a;
+color: #0B0B0C;
 }
 
 .category-card p {
@@ -205,7 +208,7 @@ font-size: 0.9rem;
 /* Featured Content */
 .featured {
 padding: 100px 0;
-background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+background: linear-gradient(135deg, #E9E3D7 0%, #e9ecef 100%);
 }
 
 .featured-grid {
@@ -225,7 +228,7 @@ box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 .featured-story h3, .featured-poll h3 {
 font-size: 1.8rem;
 margin-bottom: 1rem;
-color: #1a1a1a;
+color: #0B0B0C;
 }
 
 .poll-options {
@@ -236,7 +239,7 @@ margin: 1rem 0;
 display: block;
 margin: 0.5rem 0;
 padding: 10px;
-background: #f8f9fa;
+background: #E9E3D7;
 border: none;
 border-radius: 10px;
 cursor: pointer;
@@ -252,7 +255,7 @@ background: #e9ecef;
 /* Expert Corner */
 .expert-corner {
 padding: 100px 0;
-background: #1a1a1a;
+background: #0B0B0C;
 color: white;
 text-align: center;
 }
@@ -274,7 +277,7 @@ border: 1px solid rgba(255,255,255,0.2);
 
 /* Footer */
 .footer {
-background: #1a1a1a;
+background: #0B0B0C;
 color: white;
 padding: 50px 0 20px;
 text-align: center;
@@ -289,7 +292,7 @@ margin-bottom: 2rem;
 
 .footer h4 {
 margin-bottom: 1rem;
-color: #d4af37;
+color: #C6A664;
 }
 
 .footer-links {
@@ -303,7 +306,7 @@ transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-color: #d4af37;
+color: #C6A664;
 }
 
 /* Responsive */
@@ -641,7 +644,7 @@ setTimeout(() => {
 // Simulate loading new poll results
 const pollResults = document.querySelectorAll('.poll-option');
 pollResults.forEach((option, index) => {
-option.style.background = `linear-gradient(90deg, #e9ecef ${[45, 30, 15, 10][index]}%, #f8f9fa ${[45, 30, 15, 10][index]}%)`;
+option.style.background = `linear-gradient(90deg, #e9ecef ${[45, 30, 15, 10][index]}%, #E9E3D7 ${[45, 30, 15, 10][index]}%)`;
 });
 }, 2000);
 </script>
