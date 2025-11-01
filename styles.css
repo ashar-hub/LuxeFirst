@@ -81,7 +81,6 @@ transition: 0.3s;
                 url('dubai1.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     height: 100vh;
     display: flex;
     align-items: center;
