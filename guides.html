@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Guides - LuxeFirst</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">LuxeFirst</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="guides.html">Guides</a></li>
+                <li><a href="stories.html">Stories</a></li>
+                <li><a href="experts.html">Experts</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+        </nav>
+
+        <!-- Guides Landing Page -->
+<section id="guides" class="categories" style="background: #F9F7F4;">
+  <div class="container">
+    <h2 class="section-title">Your Luxury Learning Hub</h2>
+    <p style="text-align: center; font-size: 1.3rem; margin-bottom: 4rem; color: #666; max-width: 700px; margin-left: auto; margin-right: auto;">
+      From complete beginner to seasoned collector — explore at your own pace, learn the secrets, and make confident decisions in the world of luxury.
+    </p>
+
+    <!-- Knowledge Level Selector -->
+    <div style="text-align: center; margin-bottom: 4rem;">
+      <div style="display: inline-flex; background: white; padding: 8px; border-radius: 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+        <button class="knowledge-level-btn active" data-level="beginner" style="
+          padding: 12px 30px;
+          border: none;
+          border-radius: 50px;
+          background: #C6A664;
+          color: white;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          margin: 0 4px;
+        ">🌱 Beginner</button>
+        <button class="knowledge-level-btn" data-level="enthusiast" style="
+          padding: 12px 30px;
+          border: none;
+          border-radius: 50px;
+          background: transparent;
+          color: #666;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          margin: 0 4px;
+        ">🔥 Enthusiast</button>
+        <button class="knowledge-level-btn" data-level="collector" style="
+          padding: 12px 30px;
+          border: none;
+          border-radius: 50px;
+          background: transparent;
+          color: #666;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          margin: 0 4px;
+        ">👑 Collector</button>
+      </div>
+      <p id="level-description" style="margin-top: 1rem; font-size: 0.95rem; color: #888;">
+        Perfect for those just discovering luxury
+      </p>
+    </div>
+
+    <!-- Guide Categories Grid -->
+    <div class="categories-grid" style="margin-top: 3rem;">
+      
+      <div class="guide-category-card" data-category="watches">
+        <img src="watch.jpg" alt="Watch Guides" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 1rem;">
+        <h3>Timepieces</h3>
+        <p class="guide-description beginner">Learn about movements, brands, and your first luxury watch</p>
+        <p class="guide-description enthusiast" style="display: none;">Understand complications, investment pieces, and brand histories</p>
+        <p class="guide-description collector" style="display: none;">Master auction strategies, restoration, and building a collection</p>
+        <div style="margin-top: 1rem; font-size: 0.85rem; color: #C6A664; font-weight: 600;">
+          <span class="guide-count">12 Guides</span> • <span class="guide-time">45 min read</span>
+        </div>
+        <a href="#watch-guide" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Start Learning</a>
+      </div>
+
+      <div class="guide-category-card" data-category="cars">
+        <img src="car.jpg" alt="Car Guides" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 1rem;">
+        <h3>Automobiles</h3>
+        <p class="guide-description beginner">Buying vs leasing, maintenance costs, and first supercar advice</p>
+        <p class="guide-description enthusiast" style="display: none;">Track day prep, modification culture, and exotic ownership</p>
+        <p class="guide-description collector" style="display: none;">Classic car investments, restoration projects, and auction houses</p>
+        <div style="margin-top: 1rem; font-size: 0.85rem; color: #C6A664; font-weight: 600;">
+          <span class="guide-count">15 Guides</span> • <span class="guide-time">60 min read</span>
+        </div>
+        <a href="#car-guide" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Start Learning</a>
+      </div>
+
+      <div class="guide-category-card" data-category="yachts">
+        <img src="yacht.jpg" alt="Yacht Guides" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 1rem;">
+        <h3>Yachts</h3>
+        <p class="guide-description beginner">Charter basics, yacht types, and first-time experiences</p>
+        <p class="guide-description enthusiast" style="display: none;">Fractional ownership, crew management, and popular routes</p>
+        <p class="guide-description collector" style="display: none;">Custom builds, naval architecture, and superyacht ownership</p>
+        <div style="margin-top: 1rem; font-size: 0.85rem; color: #C6A664; font-weight: 600;">
+          <span class="guide-count">10 Guides</span> • <span class="guide-time">40 min read</span>
+        </div>
+        <a href="#yacht-guide" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Start Learning</a>
+      </div>
+
+      <div class="guide-category-card" data-category="realestate">
+        <img src="property.jpg" alt="Real Estate Guides" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 1rem;">
+        <h3>Real Estate</h3>
+        <p class="guide-description beginner">Dubai neighborhoods, buying process, and investment basics</p>
+        <p class="guide-description enthusiast" style="display: none;">International markets, property management, and ROI strategies</p>
+        <p class="guide-description collector" style="display: none;">Portfolio diversification, development projects, and trophy properties</p>
+        <div style="margin-top: 1rem; font-size: 0.85rem; color: #C6A664; font-weight: 600;">
+          <span class="guide-count">18 Guides</span> • <span class="guide-time">75 min read</span>
+        </div>
+        <a href="#realestate-guide" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Start Learning</a>
+      </div>
+
+      <div class="guide-category-card" data-category="jewelry">
+        <img src="jewelry.jpg" alt="Jewelry Guides" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 1rem;">
+        <h3>Jewelry</h3>
+        <p class="guide-description beginner">Understanding the 4 C's, certifications, and first investment pieces</p>
+        <p class="guide-description enthusiast" style="display: none;">Designer pieces, auction strategies, and care & maintenance</p>
+        <p class="guide-description collector" style="display: none;">Rare gemstones, high jewelry houses, and building a collection</p>
+        <div style="margin-top: 1rem; font-size: 0.85rem; color: #C6A664; font-weight: 600;">
+          <span class="guide-count">14 Guides</span> • <span class="guide-time">50 min read</span>
+        </div>
+        <a href="#jewelry-guide" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Start Learning</a>
+      </div>
+
+      <div class="guide-category-card" data-category="jets">
+        <img src="jet.jpg" alt="Private Jet Guides" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 1rem;">
+        <h3>Private Jets</h3>
+        <p class="guide-description beginner">Charter vs membership, aircraft types, and first-time flying private</p>
+        <p class="guide-description enthusiast" style="display: none;">Fractional ownership, jet card programs, and route optimization</p>
+        <p class="guide-description collector" style="display: none;">Full ownership economics, aircraft selection, and operating costs</p>
+        <div style="margin-top: 1rem; font-size: 0.85rem; color: #C6A664; font-weight: 600;">
+          <span class="guide-count">8 Guides</span> • <span class="guide-time">35 min read</span>
+        </div>
+        <a href="#jet-guide" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Start Learning</a>
+      </div>
+
+    </div>
+
+    <!-- Learning Path Visualization -->
+    <div style="margin-top: 5rem; text-align: center; padding: 3rem; background: white; border-radius: 20px;">
+      <h3 style="font-size: 2rem; margin-bottom: 2rem;">Your Learning Journey</h3>
+      <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 2rem;">
+        <div style="flex: 1; min-width: 200px;">
+          <div style="width: 80px; height: 80px; background: #E9E3D7; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem;">1</div>
+          <h4>Choose Your Level</h4>
+          <p style="font-size: 0.9rem; color: #666;">Beginner, Enthusiast, or Collector</p>
+        </div>
+        <div style="color: #C6A664; font-size: 2rem;">→</div>
+        <div style="flex: 1; min-width: 200px;">
+          <div style="width: 80px; height: 80px; background: #E9E3D7; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem;">2</div>
+          <h4>Select Category</h4>
+          <p style="font-size: 0.9rem; color: #666;">Watches, Cars, Yachts, etc.</p>
+        </div>
+        <div style="color: #C6A664; font-size: 2rem;">→</div>
+        <div style="flex: 1; min-width: 200px;">
+          <div style="width: 80px; height: 80px; background: #E9E3D7; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem;">3</div>
+          <h4>Learn & Explore</h4>
+          <p style="font-size: 0.9rem; color: #666;">Step-by-step guided content</p>
+        </div>
+        <div style="color: #C6A664; font-size: 2rem;">→</div>
+        <div style="flex: 1; min-width: 200px;">
+          <div style="width: 80px; height: 80px; background: #C6A664; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: white;">✓</div>
+          <h4>Make Confident Decisions</h4>
+          <p style="font-size: 0.9rem; color: #666;">Armed with knowledge</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <section class="guides-section">
+        <div class="container">
+            <h2 class="section-title">Your Luxury Learning Hub</h2>
+            <p class="section-subtitle">
+                From complete beginner to seasoned collector — explore at your own pace
+            </p>
+
+            
+            <!-- Watch Guide Detail Page -->
+<section id="watch-guide" class="categories" style="background: white; display: none;">
+  <div class="container">
+    
+    <!-- Breadcrumb Navigation -->
+    <div style="margin-bottom: 2rem; font-size: 0.9rem; color: #888;">
+      <a href="#guides" style="color: #C6A664; text-decoration: none;">Guides</a> 
+      <span style="margin: 0 0.5rem;">→</span> 
+      <span>Timepieces</span>
+    </div>
+
+    <!-- Guide Header -->
+    <div style="text-align: center; margin-bottom: 4rem;">
+      <h1 style="font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; margin-bottom: 1rem;">The Complete Watch Guide</h1>
+      <p style="font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto;">
+        From understanding movements to making your first investment — everything you need to navigate the world of luxury timepieces
+      </p>
+      
+      <!-- Progress Tracker -->
+      <div style="margin-top: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.85rem; color: #888;">
+          <span>Your Progress</span>
+          <span id="progress-percentage">0% Complete</span>
+        </div>
+        <div style="height: 8px; background: #E9E3D7; border-radius: 10px; overflow: hidden;">
+          <div id="progress-bar" style="height: 100%; width: 0%; background: linear-gradient(90deg, #C6A664, #D4AF37); transition: width 0.5s ease;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Learning Steps -->
+    <div style="max-width: 900px; margin: 0 auto;">
+      
+      <!-- Step 1 -->
+      <div class="learning-step" data-step="1" style="margin-bottom: 4rem; padding: 2rem; background: #F9F7F4; border-radius: 20px; border-left: 4px solid #C6A664;">
+        <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+          <div style="width: 50px; height: 50px; background: #C6A664; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.3rem; margin-right: 1rem;">1</div>
+          <h3 style="font-size: 1.8rem; margin: 0;">Understanding Watch Types & Movements</h3>
+        </div>
+        
+        <div class="step-content beginner">
+          <h4 style="color: #C6A664; margin-bottom: 1rem;">🌱 Beginner Level</h4>
+          <p style="line-height: 1.8; margin-bottom: 1rem;">
+            A watch is more than just a time-telling device — it's a piece of craftsmanship. Let's break down the basics:
+          </p>
+          <div style="background: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 1rem;">
+            <h5 style="margin-bottom: 0.5rem;">⚙️ Movement Types (The Engine)</h5>
+            <ul style="line-height: 1.8;">
+              <li><strong>Quartz:</strong> Battery-powered, accurate, low-maintenance. Perfect for first-timers (e.g., TAG Heuer Aquaracer)</li>
+              <li><strong>Automatic:</strong> Self-winding, no battery needed, shows craftsmanship (e.g., Rolex Submariner)</li>
+              <li><strong>Manual:</strong> You wind it daily, traditional, collector's choice (e.g., Patek Philippe Calatrava)</li>
+            </ul>
+          </div>
+          <p style="background: #E9E3D7; padding: 1rem; border-radius: 8px; font-style: italic;">
+            💡 <strong>Beginner Tip:</strong> Start with automatic if you want luxury feel. Quartz if you want practicality.
+          </p>
+        </div>
+
+        <div class="step-content enthusiast" style="display: none;">
+          <h4 style="color: #C6A664; margin-bottom: 1rem;">🔥 Enthusiast Level</h4>
+          <p style="line-height: 1.8; margin-bottom: 1rem;">
+            Now that you understand basics, let's dive into what makes certain movements valuable:
+          </p>
+          <div style="background: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 1rem;">
+            <h5 style="margin-bottom: 0.5rem;">🔧 In-House vs Third-Party Movements</h5>
+            <ul style="line-height: 1.8;">
+              <li><strong>In-House (Manufacture):</strong> Brands like Rolex, Patek, AP make their own movements = higher value</li>
+              <li><strong>Modified ETA/Sellita:</strong> Swiss movements customized by brands = good value</li>
+              <li><strong>Complications:</strong> Extra functions (date, chronograph, moon phase) add complexity and value</li>
+            </ul>
+          </div>
+          <p style="background: #E9E3D7; padding: 1rem; border-radius: 8px; font-style: italic;">
+            💡 <strong>Enthusiast Insight:</strong> A basic Rolex has better resale than a complicated lower-tier brand. Movement matters, but brand matters more.
+          </p>
+        </div>
+
+        <div class="step-content collector" style="display: none;">
+          <h4 style="color: #C6A664; margin-bottom: 1rem;"> Collector Level</h4>
+          <p style="line-height: 1.8; margin-bottom: 1rem;">
+            At this level, you understand that movements tell a story. Here's what separates investment pieces:
+          </p>
+          <div style="background: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 1rem;">
+            <h5 style="margin-bottom: 0.5rem;"> Investment-Grade Movements</h5>
+            <ul style="line-height: 1.8;">
+              <li><strong>Discontinued calibers:</strong> Zenith El Primero (Rolex Daytona), Patek 240 — scarcity drives value</li>
+              <li><strong>Historical significance:</strong> Omega 861 (Moon landing), IWC 89 series (engineering marvels)</li>
+              <li><strong>Limited production runs:</strong> FP Journe, Philippe Dufour — micro-brands with cult status</li>
+            </ul>
+          </div>
+          <p style="background: #E9E3D7; padding: 1rem; border-radius: 8px; font-style: italic;">
+            💡 <strong>Collector Strategy:</strong> Focus on movements that are historically significant OR being phased out. These appreciate fastest.
+          </p>
+        </div>
+
+        <button class="mark-complete-btn" data-step="1" style="
+          margin-top: 1.5rem;
+          padding: 12px 24px;
+          background: white;
+          border: 2px solid #C6A664;
+          color: #C6A664;
+          border-radius: 8px;
+          cursor: pointer;
+          font-weight: 600;
+          transition: all 0.3s ease;
+        ">Mark as Complete ✓</button>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="learning-step" data-step="2" style="margin-bottom: 4rem; padding: 2rem; background: #F9F7F4; border-radius: 20px; border-left: 4px solid #C6A664;">
+        <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+          <div style="width: 50px; height: 50px; background: #C6A664; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.3rem; margin-right: 1rem;">2</div>
+          <h3 style="font-size: 1.8rem; margin: 0;">How to Identify Your Style & Budget</h3>
+        </div>
+        
+        <div class="step-content beginner">
+          <h4 style="color: #C6A664; margin-bottom: 1rem;"> Beginner Level</h4>
+          <p style="line-height: 1.8; margin-bottom: 1rem;">
+            Your first luxury watch should reflect YOU. Here's how to find your match:
+          </p>
+          <div style="background: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 1rem;">
+            <h5 style="margin-bottom: 0.5rem;">🎯 Style Categories</h5>
+            <ul style="line-height: 1.8;">
+              <li><strong>Dress Watch:</strong> Thin, elegant, leather strap (Business meetings, formal events) — Budget: $5K-15K</li>
+              <li><strong>Sports Watch:</strong> Durable, bracelet, water-resistant (Daily wear, active lifestyle) — Budget: $8K-20K</li>
+              <li><strong>Dive Watch:</strong> Rotating bezel, high water resistance (Versatile, casual to smart-casual) — Budget: $7K-25K</li>
+              <li><strong>Chronograph:</strong> Stopwatch function, sporty (Statement piece, conversation starter) — Budget: $6K-30K</li>
+            </ul>
+          </div>
+          <p style="background: #E9E3D7; padding: 1rem; border-radius: 8px; font-style: italic;">
+            💡 <strong>First Watch Recommendation:</strong> Rolex Oyster Perpetual (sports), Omega Speedmaster (chronograph), or Cartier Tank (dress). These hold value best.
+          </p>
+        </div>
+
+        <div class="step-content enthusiast" style="display: none;">
+          <h4 style="color: #C6A664; margin-bottom: 1rem;">🔥 Enthusiast Level</h4>
+          <p style="line-height: 1.8; margin-bottom: 1rem;">
+            You already own 1-2 watches. Let's strategically build your collection:
+          </p>
+          <div style="background: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 1rem;">
+            <h5 style="margin-bottom: 0.5rem;">📊 The 3-Watch Collection Strategy</h5>
+            <ul style="line-height: 1.8;">
+              <li><strong>Watch 1 - Daily Beater:</strong> Sports/dive watch you don't baby (Rolex Submariner, Omega Seamaster) — $8K-12K</li>
+              <li><strong>Watch 2 - Dress Watch:</strong> Elegant piece for formal occasions (Cartier, JLC Reverso) — $6K-10K</li>
+              <li><strong>Watch 3 - Statement Piece:</strong> The "wow factor" watch (AP Royal Oak, Rolex Daytona, Patek Nautilus) — $25K+</li>
+            </ul>
+          </div>
+          <p style="background: #E9E3D7; padding: 1rem; border-radius: 8px; font-style: italic;">
+            💡 <strong>Enthusiast Tip:</strong> Diversify brands. Don't buy 3 Rolexes — mix Rolex, Omega, and one independent brand.
+          </p>
+        </div>
+
+        <div class="step-content collector" style="display: none;">
+          <h4 style="color: #C6A664; margin-bottom: 1rem;"> Collector Level</h4>
+          <p style="line-height: 1.8; margin-bottom: 1rem;">
+            Your collection should tell a story and appreciate. Here's advanced strategy:
+          </p>
+          <div style="background: white; padding: 1.5rem; border-radius: 12px; margin-bottom: 1rem;">
+            <h5 style="margin-bottom: 0.5rem;">🎯 Portfolio Diversification Strategy</h5>
+            <ul style="line-height: 1.8;">
+              <li><strong>Blue Chips (60%):</strong> Patek, Rolex, AP — guaranteed value retention</li>
+              <li><strong>Rising Stars (25%):</strong> F.P. Journe, Czapek, De Bethune — high upside potential</li>
+              <li><strong>Vintage/Special (15%):</strong> Historical pieces, limited editions — passion purchases</li>
+            </ul>
+          </div>
+          <p style="background: #E9E3D7; padding: 1rem; border-radius: 8px; font-style: italic;">
+            💡 <strong>Collector Wisdom:</strong> A Patek 5711 bought in 2015 for $25K sells for $150K+ today. Identify tomorrow's classics TODAY.
+          </p>
+        </div>
+
+        <button class="mark-complete-btn" data-step="2" style="
+          margin-top: 1.5rem;
+          padding: 12px 24px;
+          background: white;
+          border: 2px solid #C6A664;
+          color: #C6A664;
+          border-radius: 8px;
+          cursor: pointer;
+          font-weight: 600;
+          transition: all 0.3s ease;
+        ">Mark as Complete ✓</button>
+      </div>
+
+      <!-- Continue pattern for Steps 3 & 4... -->
+
+    </div>
+
+    <!-- Navigation -->
+    <div style="text-align: center; margin-top: 4rem;">
+      <a href="#guides" class="btn btn-secondary" style="margin: 0 0.5rem;">← Back to All Guides</a>
+      <a href="#" class="btn btn-primary" style="margin: 0 0.5rem;">Next Category: Cars →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Featured Timepieces Section -->
+<section id="featured-watches" class="featured">
+  <div class="container">
+    <h2 class="section-title">Featured Timepieces</h2>
+    <div class="featured-grid">
+      
+      <div class="featured-story">
+        <h3>🕰️ First Watch Story</h3>
+        <h4>"From Dreaming to Owning: My First Rolex"</h4>
+        <p>Sarah, 28, Marketing Executive from Dubai shares her journey. "I researched for few weeks before choosing the Datejust. The moment I put it on, I understood why people call it an investment piece."</p>
+        <a href="#" class="btn btn-primary" style="margin-top: 1rem;">Read Full Story</a>
+      </div>
+
+      <div class="featured-story">
+        <h3>⌚ Investment Guide</h3>
+        <h4>Watches That Appreciate in Value</h4>
+        <p>Not all luxury watches are created equal. Learn which timepieces from Patek Philippe, Rolex, and Audemars Piguet have historically gained value and why collectors treat them as wearable assets.</p>
+        <a href="#" class="btn btn-primary" style="margin-top: 1rem;">Learn More</a>
+      </div>
+
+      <div class="featured-story">
+        <h3>⏱️ Beginner's Guide</h3>
+        <h4>Your First Luxury Watch: What to Know</h4>
+        <p>Movement types, case materials, water resistance ratings - we break down everything a first-time buyer needs to know before walking into a boutique with confidence.</p>
+        <a href="#" class="btn btn-primary" style="margin-top: 1rem;">Start Learning</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+    </header>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 LuxeFirst. Building Dubai's luxury community, one story at a time.</p>
+        </div>
+    </footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
