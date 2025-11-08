@@ -61,7 +61,7 @@ collections:
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
 
-      - name: "explore"
+  - name: "explore"
     label: "Explore Content"
     folder: "content/explore"
     create: true
