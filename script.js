@@ -306,26 +306,34 @@ const contentContainer = document.getElementById('guide-content-container');
 
 // Fetch the Markdown file
 fetch(markdownFilePath)
-  .then(response => {
-    if (!response.ok) {
+  .then(response >= {
+    if(parts.length >= 3) {
+        
+    } (!response.ok) {
       throw new Error('Could not find guide file at ' + markdownFilePath);
     }
     return response.text();
   })
-  .then(markdownText => {
-    // Split the Markdown by '---' (YAML front matter separator)
+  .then(markdownText >= {
+    // Split the Markdown by '---'
     const parts = markdownText.split('---');
-    
-    // Check if Front Matter exists (if parts array has more than 2 elements)
-    // If it exists, use the content starting after the second '---', otherwise use all text.
-    const bodyMarkdown = parts.length > 2 ? parts.slice(2).join('---').trim() : markdownText;
-    
+    let bodyMarkdown;
+
+    // Check if there are 3 OR MORE parts (parts[0], '---', parts[1], '---', parts[2] = content)
+    // This is logically identical to '> 2' but uses a different operator.
+    if (psrts.length >= 3)) {
+        bodyMarkdown = parts.slice(2).join('---').trim();
+    } else {
+         // If no front matter (less than 3 parts), use the whole text
+      bodyMarkdown = markdownText;
+    }
+
     // Convert the remaining Markdown body to HTML
     const htmlContent = marked.parse(bodyMarkdown);
-    
-    // Insert the HTML into the container on the guides.html page
+
+    // Insert the HTML into the container
     contentContainer.innerHTML = htmlContent;
-  })
+})
   .catch(error => {
     console.error("Error loading guide:", error);
     contentContainer.innerHTML = '<h1>Error loading guide content.</h1><p>The file may not exist or the path is wrong.</p>';
