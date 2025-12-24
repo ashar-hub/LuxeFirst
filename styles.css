@@ -517,3 +517,295 @@ transform: scale(1.05);
     100% { transform: translateX(100%); }
 }
 
+/* ========================================
+   LUXURY RANKING GAME STYLES
+======================================== */
+
+/* Refactored Hero Layout */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+
+.hero-content-top {
+    text-align: center;
+    margin-bottom: 60px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.hero-content-top h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    letter-spacing: -2px;
+    color: #F9F7F4;
+}
+
+.hero-tagline {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    opacity: 0.9;
+    color: #F9F7F4;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Game Container */
+.ranking-game-container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 20px;
+}
+
+.game-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #F9F7F4;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+}
+
+.game-subtitle {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+/* Cards Wrapper - Horizontal Scroll */
+.game-cards-wrapper {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    overflow-y: visible;
+    padding: 20px 10px 40px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.game-cards-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.game-cards-wrapper::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.game-cards-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(212, 175, 55, 0.5);
+    border-radius: 10px;
+}
+
+/* Game Card - Glassmorphism */
+.game-card {
+    min-width: 350px;
+    max-width: 350px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 24px;
+    padding: 2rem;
+    scroll-snap-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(212, 175, 55, 0.5);
+    box-shadow: 0 12px 48px rgba(212, 175, 55, 0.15);
+}
+
+/* Card Header */
+.card-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-header h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    color: #F9F7F4;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.card-instruction {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+/* Ranking Items */
+.ranking-items {
+    margin: 1.5rem 0;
+}
+
+.rank-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+}
+
+.rank-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(212, 175, 55, 0.4);
+    transform: translateX(4px);
+}
+
+.rank-item.selected {
+    background: rgba(212, 175, 55, 0.15);
+    border-color: #C6A664;
+}
+
+.rank-item.holding {
+    animation: holdPulse 1s ease-in-out;
+    transform: scale(0.95);
+}
+
+@keyframes holdPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(212, 175, 55, 0); }
+}
+
+.rank-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    background: rgba(212, 175, 55, 0.2);
+    border: 1px solid #C6A664;
+    border-radius: 50%;
+    margin-right: 1rem;
+    font-weight: 700;
+    color: #C6A664;
+    font-size: 0.95rem;
+}
+
+.rank-item:not(.selected) .rank-number {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.item-name {
+    flex: 1;
+    color: #F9F7F4;
+    font-weight: 500;
+}
+
+/* Results View */
+.card-results {
+    margin-top: 2rem;
+}
+
+.results-intro {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.result-bar {
+    margin-bottom: 1rem;
+}
+
+.result-bar span:first-child {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+
+.bar {
+    width: 100%;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.fill {
+    height: 100%;
+    background: linear-gradient(90deg, #C6A664, #D4AF37);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 12px;
+    color: #0B0B0C;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.insight-text {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: rgba(212, 175, 55, 0.1);
+    border-left: 3px solid #C6A664;
+    border-radius: 8px;
+    color: #F9F7F4;
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+/* Card Footer Note */
+.card-footer-note {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-top: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content-top h1 {
+        font-size: 2.5rem;
+    }
+    
+    .game-title {
+        font-size: 2rem;
+    }
+    
+    .game-card {
+        min-width: 300px;
+        max-width: 300px;
+        padding: 1.5rem;
+    }
+    
+    .game-cards-wrapper {
+        padding: 10px 5px 30px;
+    }
+}

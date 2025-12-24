@@ -16,105 +16,342 @@
 <body>
 <!-- Header -->
 <header class="header">
-<nav class="nav container">
-<div class="logo">LuxeFirst</div>
-<ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="explore.html">Explore</a></li>
-    <li><a href="guides.html">Guides</a></li>
-    <li><a href="stories.html">Stories</a></li>
-    <li><a href="experts.html">Experts</a></li>
-    <li><a href="#about">About</a></li>
-</ul>
-<li><a href="#about">About</a></li>
-</ul>
-<div class="mobile-menu">
-<span></span>
-<span></span>
-<span></span>
-</div>
-</nav>
+    <nav class="nav container">
+        <a href="index.html" class="logo">LuxeFirst</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="guides.html">Guides</a></li>
+            <li><a href="stories.html">Stories</a></li>
+            <li><a href="experts.html">Experts</a></li>
+            <li><a href="index.html#about">About</a></li>
+        </ul>
+    </nav>
 </header>
 
-<!-- Hero Section -->
-
+<!-- Hero Section with Game -->
 <section id="home" class="hero">
-<div class="hero-content">
-<h1>Luxury, Reimagined for You.</h1>
-<p class="hero-tagline">Beyond Possession, Into Passion</p>
-<div class="cta-buttons">
-<a href="#explore" class="btn btn-primary interactive-element">Start Exploring</a>
-<a href="#guides" class="btn btn-secondary interactive-element">Beginner's Guide</a>
-</div>
-</div>
+    <!-- Repositioned Hero Content (Top) -->
+    <div class="hero-content-top">
+        <h1>Luxury, Reimagined for You.</h1>
+        <p class="hero-tagline">Beyond Possession, Into Passion</p>
+        <div class="cta-buttons">
+            <a href="explore.html" class="btn btn-primary">Start Exploring</a>
+            <a href="guides.html" class="btn btn-secondary">Beginner's Guide</a>
+        </div>
+    </div>
+
+    <!-- Ranking Game Section -->
+    <div class="ranking-game-container">
+        <h2 class="game-title">Discover Your Luxury DNA</h2>
+        <p class="game-subtitle">Rank your true desires. One tap at a time.</p>
+        
+        <div class="game-cards-wrapper">
+            <!-- Watches Card -->
+            <div class="game-card" data-category="watches">
+                <div class="card-header">
+                    <div class="card-icon">⌚</div>
+                    <h3>Watches Poll</h3>
+                    <p class="card-instruction">Rank by Pure Desire</p>
+                </div>
+                
+                <div class="ranking-items">
+                    <div class="rank-item" data-item="rolex">
+                        <span class="rank-number"></span>
+                        <span class="item-name">Rolex Daytona</span>
+                    </div>
+                    <div class="rank-item" data-item="ap">
+                        <span class="rank-number"></span>
+                        <span class="item-name">Audemars Piguet Royal Oak</span>
+                    </div>
+                    <div class="rank-item" data-item="patek">
+                        <span class="rank-number"></span>
+                        <span class="item-name">Patek Philippe Nautilus</span>
+                    </div>
+                    <div class="rank-item" data-item="cartier">
+                        <span class="rank-number"></span>
+                        <span class="item-name">Cartier Tank</span>
+                    </div>
+                    <div class="rank-item" data-item="richard">
+                        <span class="rank-number"></span>
+                        <span class="item-name">Richard Mille RM 11</span>
+                    </div>
+                </div>
+                
+                <div class="card-results" style="display: none;">
+                    <p class="results-intro">Community Results:</p>
+                    <div class="result-bar">
+                        <span>Rolex Daytona</span>
+                        <div class="bar"><div class="fill" style="width: 35%">35%</div></div>
+                    </div>
+                    <div class="result-bar">
+                        <span>AP Royal Oak</span>
+                        <div class="bar"><div class="fill" style="width: 28%">28%</div></div>
+                    </div>
+                    <div class="result-bar">
+                        <span>Patek Nautilus</span>
+                        <div class="bar"><div class="fill" style="width: 22%">22%</div></div>
+                    </div>
+                    <div class="result-bar">
+                        <span>Cartier Tank</span>
+                        <div class="bar"><div class="fill" style="width: 10%">10%</div></div>
+                    </div>
+                    <div class="result-bar">
+                        <span>Richard Mille</span>
+                        <div class="bar"><div class="fill" style="width: 5%">5%</div></div>
+                    </div>
+                    <p class="insight-text">Your choice says more than your garage ever could.</p>
+                </div>
+                
+                <p class="card-footer-note">Most people change their order after 30 seconds.</p>
+            </div>
+
+            <!-- Cars Card -->
+            <div class="game-card" data-category="cars">
+                <div class="card-header">
+                    <div class="card-icon">🏎️</div>
+                    <h3>Cars Poll</h3>
+                    <p class="card-instruction">You Can Keep Only ONE</p>
+                </div>
+                
+                <div class="ranking-items">
+                    <div class="rank-item" data-item="porsche">
+                        <span class="rank-number"></span>
+                        <span class="item-name">Porsche 911 GT3</span>
+                    </div>
+                    <div class="rank-item" data-item="ferrari">
+                        <span class="rank-number"></span>
+                        <span class="item-name">Ferrari 812 Superfast</span>
+                    </div>
+                    <div class="rank-item" data-item="lambo">
+                        <span class="rank-number"></span>
+                        <span class="item-name">Lamborghini Huracán</span>
+                    </div>
+                    <div class="rank-item" data-item="rolls">
+                        <span class="rank-number"></span>
+                        <span class="item-name">Rolls-Royce Ghost</span>
+                    </div>
+                    <div class="rank-item" data-item="amg">
+                        <span class="rank-number"></span>
+                        <span class="item-name">Mercedes-AMG G63</span>
+                    </div>
+                </div>
+                
+                <div class="card-results" style="display: none;">
+                    <p class="results-intro">Community Results:</p>
+                    <div class="result-bar">
+                        <span>Porsche 911 GT3</span>
+                        <div class="bar"><div class="fill" style="width: 32%">32%</div></div>
+                    </div>
+                    <div class="result-bar">
+                        <span>Ferrari 812</span>
+                        <div class="bar"><div class="fill" style="width: 26%">26%</div></div>
+                    </div>
+                    <div class="result-bar">
+                        <span>Lamborghini Huracán</span>
+                        <div class="bar"><div class="fill" style="width: 20%">20%</div></div>
+                    </div>
+                    <div class="result-bar">
+                        <span>Rolls-Royce Ghost</span>
+                        <div class="bar"><div class="fill" style="width: 15%">15%</div></div>
+                    </div>
+                    <div class="result-bar">
+                        <span>AMG G63</span>
+                        <div class="bar"><div class="fill" style="width: 7%">7%</div></div>
+                    </div>
+                    <p class="insight-text">Your choice says more than your garage ever could.</p>
+                </div>
+                
+                <p class="card-footer-note">Everything else disappears.</p>
+            </div>
+
+            <!-- Jets Card -->
+            <div class="game-card" data-category="jets">
+                <div class="card-header">
+                    <div class="card-icon">✈️</div>
+                    <h3>Jets Poll</h3>
+                    <p class="card-instruction">Rank These Ways of Flying</p>
+                </div>
+                
+                <div class="ranking-items">
+                    <div class="rank-item" data-item="gulfstream">
+                        <span class="rank-number"></span>
+                        <span class="item-name">Gulfstream G700</span>
+                    </div>
+                    <div class="rank-item" data-item="bombardier">
+                        <span class="rank-number"></span>
+                        <span class="item-name">Bombardier Global 8000</span>
+                    </div>
+                    <div class="rank-item" data-item="netjets">
+                        <span class="rank-number"></span>
+                        <span class="item-name">NetJets Fractional</span>
+                    </div>
+                    <div class="rank-item" data-item="charter">
+                        <span class="rank-number"></span>
+                        <span class="item-name">Charter Light Jet</span>
+                    </div>
+                    <div class="rank-item" data-item="firstclass">
+                        <span class="rank-number"></span>
+                        <span class="item-name">First Class Commercial</span>
+                    </div>
+                </div>
+                
+                <div class="card-results" style="display: none;">
+                    <p class="results-intro">Community Results:</p>
+                    <div class="result-bar">
+                        <span>Gulfstream G700</span>
+                        <div class="bar"><div class="fill" style="width: 40%">40%</div></div>
+                    </div>
+                    <div class="result-bar">
+                        <span>Bombardier Global</span>
+                        <div class="bar"><div class="fill" style="width: 25%">25%</div></div>
+                    </div>
+                    <div class="result-bar">
+                        <span>NetJets Fractional</span>
+                        <div class="bar"><div class="fill" style="width: 18%">18%</div></div>
+                    </div>
+                    <div class="result-bar">
+                        <span>Charter Light Jet</span>
+                        <div class="bar"><div class="fill" style="width: 12%">12%</div></div>
+                    </div>
+                    <div class="result-bar">
+                        <span>First Class</span>
+                        <div class="bar"><div class="fill" style="width: 5%">5%</div></div>
+                    </div>
+                    <p class="insight-text">Most people think they want speed. Then they discover control.</p>
+                </div>
+                
+                <p class="card-footer-note">Ignore price. Focus on how it feels.</p>
+            </div>
+
+            <!-- Real Estate Card -->
+            <div class="game-card" data-category="realestate">
+                <div class="card-header">
+                    <div class="card-icon">🏙️</div>
+                    <h3>Real Estate Poll</h3>
+                    <p class="card-instruction">Where Would You Actually Live?</p>
+                </div>
+                
+                <div class="ranking-items">
+                    <div class="rank-item" data-item="marina">
+                        <span class="rank-number"></span>
+                        <span class="item-name">Dubai Marina Penthouse</span>
+                    </div>
+                    <div class="rank-item" data-item="palm">
+                        <span class="rank-number"></span>
+                        <span class="item-name">Palm Jumeirah Villa</span>
+                    </div>
+                    <div class="rank-item" data-item="emirates">
+                        <span class="rank-number"></span>
+                        <span class="item-name">Emirates Hills Mansion</span>
+                    </div>
+                    <div class="rank-item" data-item="nyc">
+                        <span class="rank-number"></span>
+                        <span class="item-name">NYC Central Park Apt</span>
+                    </div>
+                    <div class="rank-item" data-item="como">
+                        <span class="rank-number"></span>
+                        <span class="item-name">Lake Como Estate</span>
+                    </div>
+                </div>
+                
+                <div class="card-results" style="display: none;">
+                    <p class="results-intro">Community Results:</p>
+                    <div class="result-bar">
+                        <span>Palm Jumeirah Villa</span>
+                        <div class="bar"><div class="fill" style="width: 38%">38%</div></div>
+                    </div>
+                    <div class="result-bar">
+                        <span>Dubai Marina</span>
+                        <div class="bar"><div class="fill" style="width: 24%">24%</div></div>
+                    </div>
+                    <div class="result-bar">
+                        <span>Lake Como</span>
+                        <div class="bar"><div class="fill" style="width: 20%">20%</div></div>
+                    </div>
+                    <div class="result-bar">
+                        <span>Emirates Hills</span>
+                        <div class="bar"><div class="fill" style="width: 12%">12%</div></div>
+                    </div>
+                    <div class="result-bar">
+                        <span>NYC Central Park</span>
+                        <div class="bar"><div class="fill" style="width: 6%">6%</div></div>
+                    </div>
+                    <p class="insight-text">Your answer changes with life stages. Not income.</p>
+                </div>
+                
+                <p class="card-footer-note">No investment logic. Only honesty.</p>
+            </div>
+
+            <!-- Yachts Card -->
+            <div class="game-card" data-category="yachts">
+                <div class="card-header">
+                    <div class="card-icon">⛵</div>
+                    <h3>Yachts Poll</h3>
+                    <p class="card-instruction">Choose Your Week at Sea</p>
+                </div>
+                
+                <div class="ranking-items">
+                    <div class="rank-item" data-item="superyacht">
+                        <span class="rank-number"></span>
+                        <span class="item-name">60m French Riviera</span>
+                    </div>
+                    <div class="rank-item" data-item="explorer">
+                        <span class="rank-number"></span>
+                        <span class="item-name">Explorer Yacht Norway</span>
+                    </div>
+                    <div class="rank-item" data-item="sailing">
+                        <span class="rank-number"></span>
+                        <span class="item-name">Classic Mediterranean Sail</span>
+                    </div>
+                    <div class="rank-item" data-item="catamaran">
+                        <span class="rank-number"></span>
+                        <span class="item-name">Maldives Catamaran</span>
+                    </div>
+                    <div class="rank-item" data-item="dayyacht">
+                        <span class="rank-number"></span>
+                        <span class="item-name">Dubai Day Yacht</span>
+                    </div>
+                </div>
+                
+                <div class="card-results" style="display: none;">
+                    <p class="results-intro">Community Results:</p>
+                    <div class="result-bar">
+                        <span>60m French Riviera</span>
+                        <div class="bar"><div class="fill" style="width: 42%">42%</div></div>
+                    </div>
+                    <div class="result-bar">
+                        <span>Maldives Catamaran</span>
+                        <div class="bar"><div class="fill" style="width: 26%">26%</div></div>
+                    </div>
+                    <div class="result-bar">
+                        <span>Classic Mediterranean</span>
+                        <div class="bar"><div class="fill" style="width: 18%">18%</div></div>
+                    </div>
+                    <div class="result-bar">
+                        <span>Explorer Norway</span>
+                        <div class="bar"><div class="fill" style="width: 10%">10%</div></div>
+                    </div>
+                    <div class="result-bar">
+                        <span>Dubai Day Yacht</span>
+                        <div class="bar"><div class="fill" style="width: 4%">4%</div></div>
+                    </div>
+                    <p class="insight-text">One week. One yacht. Pure escape.</p>
+                </div>
+                
+                <p class="card-footer-note">One week. One yacht.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- Footer -->
-
+<!-- Footer (keep your existing footer) -->
 <footer id="about" class="footer">
-<div class="container">
-<div class="footer-content">
-<div>
-<h4>LuxeFirst</h4>
-<p>Your gateway to luxury living, starting from Dubai's vibrant luxury scene.</p>
-</div>
-<div>
-<h4>Categories</h4>
-<ul class="footer-links">
-<li><a href="#">Watches</a></li>
-<li><a href="#">Cars</a></li>
-<li><a href="#">Yachts</a></li>
-<li><a href="#">Real Estate</a></li>
-<li><a href="#">Jewelry</a></li>
-</ul>
-</div>
-<div>
-<h4>Community</h4>
-<ul class="footer-links">
-<li><a href="#">First-Time Stories</a></li>
-<li><a href="#">Expert Corner</a></li>
-<li><a href="#">Polls & Contests</a></li>
-<li><a href="#">Events</a></li>
-</ul>
-</div>
-<div>
-<h4>Connect</h4>
-<ul class="footer-links">
-<li><a href="#">Instagram</a></li>
-<li><a href="#">LinkedIn</a></li>
-<li><a href="#">Newsletter</a></li>
-<li><a href="#">Contact</a></li>
-</ul>
-</div>
-</div>
-<div style="border-top: 1px solid #333; padding-top: 20px; margin-top: 30px;">
-<p>&copy; 2025 LuxeFirst. Building Dubai's luxury community, one story at a time.</p>
-</div>
-</div>
+    <!-- Your existing footer content -->
 </footer>
 
-<!-- Back to Top Button -->
-<button id="backToTop" style="
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: #C6A664;
-    color: #0B0B0C;
-    border: none;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    box-shadow: 0 10px 30px rgba(198, 166, 100, 0.3);
-    opacity: 0;
-    transition: all 0.3s ease;
-    z-index: 999;
-">↑</button>
-
-<!--script-->
+<script src="ranking-game.js"></script>
 <script src="script.js"></script>
-
 
 </body>
 
