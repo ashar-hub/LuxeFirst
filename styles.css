@@ -616,31 +616,34 @@ transform: scale(1.05);
 
 /* Game Card - Glassmorphism */
 .game-card {
-    flex: 0 0 240px; /* Reduced width from 300px */
-    min-width: 240px;
+    flex: 0 0 260px; /* Reduced width from 300px */
+    min-width: 260px;
+    max-width: 260px;
     background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    
-    /* 5% internal space on all sides */
-    padding: 5%; 
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 1.25rem;
     box-sizing: border-box; 
     
     display: flex;
     flex-direction: column;
     scroll-snap-align: start;
-    transition: transform 0.3s ease;
-/* Height reduction: ensure no unnecessary min-height is forcing it to be tall */
+    transition: transform 0.3s ease cubic-bezier(0.4, 0, 0.2, 1);
     height: auto; 
 }
 
-/* Tighten Header to reduce overall height */
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border-color: rgba(212, 175, 55, 0.4);
+}
 .card-header {
     text-align: center;
-    margin-bottom: 0.5rem; /* Reduced margin */
-    padding-bottom: 0.5rem; /* Reduced padding */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 .card-icon {
     font-size: 1rem;
@@ -649,30 +652,53 @@ transform: scale(1.05);
 
 .card-header h3 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem; /* Shrunk from 1.4rem */
+    font-size:clamp(1rem, 2vw, 1.2rem);
     color: #F9F7F4;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.25rem;
     line-height: 1.2;
+    letter-spacing: 0.5px;
 }
 
 .card-instruction {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 0.75rem; /* Shrunk from 0.95rem */
+    font-size: 0.75rem; 
+    font-weight: 400;
+    letter-spacing: 0.5px;
 }
 
-/* Tighten Ranking Items to fit inside the shorter card */
+
 .ranking-items {
-    margin: 0.5rem 0;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 .rank-item {
     display: flex;
     align-items: center;
-    padding: 6px 10px; /* Thinner items to reduce height */
-    margin-bottom: 6px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 8px;
-    width: 100%; /* Keeps it inside the card */
+    transition: all 0.2s ease;
+}
+.item-name {
+    flex: 1;
+    color: #F9F7F4;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: left;
+    word-break: normal;
+    overflow-wrap: normal;
+    font-size: clamp(0.75rem, 1vw + 0.5rem, 0.875rem);
+}
+.rank-number {
+    font-size: 0.7rem;
+    min-width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    border-color: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .rank-item:hover {
